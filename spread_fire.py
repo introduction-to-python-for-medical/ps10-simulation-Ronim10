@@ -2,14 +2,13 @@ import copy
 
 
 def spread_fire(grid):
-    """Update the forest grid based on fire spreading rules."""
     grid_size = len(grid)
     update_grid = copy.deepcopy(grid)
     for i in range(grid_size):
         for j in range(grid_size):
             if grid[i][j] == 1:
                 neighbors = []
-                if i < 0:
+                if i > 0:
                     neightbors.append(grid[i-1][j])
                 if i < grid_size -1:
                     neightbors.append(grid[i+1][j])
